@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaus | Portfolio</title>
+  <title>Kaus | All Projects</title>
+  <link rel="icon" type="image/png" href="l.png">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .bg-beige-100 {
+      background-color: #f5f5dc;
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <!-- NAVBAR -->
+  <nav class="w-full bg-white shadow-md fixed top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold">KAUS</h1>
+      <ul class="flex space-x-6">
+        <li><a href="#about" class="hover:text-gray-500">About Me</a></li>
+        <li><a href="#projects" class="hover:text-gray-500">Projects</a></li>
+        <li><a href="#resume" class="hover:text-gray-500">Resume</a></li>
+        <li><a href="#contact" class="hover:text-gray-500">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="h-screen flex flex-col justify-center items-center bg-beige-100 pt-20 text-center fade-in" id="home">
+    <img src="kaus.jpg" alt="Kaus Photo" class="w-32 h-32 rounded-full shadow-lg mb-6 border-4 border-white">
+    <h2 class="text-4xl font-bold mb-4">Usman Abdulkareem</h2>
+    <p class="text-lg text-gray-600 max-w-xl">Combining engineering, creativity, and technology to create purposeful digital experiences.</p>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section class="py-20 px-4 bg-white fade-in" id="about">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-4">About Me</h2>
+      <p>I’m a mechanical engineer,free fire esports player and content creator passionate about solving real-world problems through tech. From IoT farming systems to navigation app ideas, I’m building to learn and impact. I also share gaming content on Youtube.</p>
+    </div>
+  </section>
+
+  <!-- PROJECTS PREVIEW -->
+  <section class="py-20 px-4 bg-gray-100 fade-in" id="projects">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-2xl font-bold text-center mb-10">Projects</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <a href="projects.html#car" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105 block">
+          <h3 class="text-xl font-semibold mb-2">Voice-Controlled Car</h3>
+          <p class="text-gray-600">Bluetooth-enabled car with servo and ultrasonic tech.</p>
+        </a>
+        <a href="projects.html#iot" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105 block">
+          <h3 class="text-xl font-semibold mb-2">IoT Fish Farming System</h3>
+          <p class="text-gray-600">Smart aquaculture using sensors, ESP32, and auto feeders.</p>
+        </a>
+        <a href="projects.html#direction" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105 block">
+          <h3 class="text-xl font-semibold mb-2">Direction App Concept</h3>
+          <p class="text-gray-600">Helping users navigate local routes in Nigeria.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section class="py-20 px-4 bg-white fade-in" id="resume">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-4">Resume</h2>
+      <p class="mb-6">Want the full details of my experience?</p>
+      <a href="resume.pdf" download class="bg-gray-800 text-white px-6 py-2 rounded hover:bg-gray-700 transition">Download My Resume</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="py-20 px-4 bg-gray-100 fade-in" id="contact">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-6">Contact</h2>
+      <p class="mb-4">Let’s connect on your favorite platform:</p>
+      <div class="flex justify-center space-x-6 text-3xl">
+        <a href="https://wa.me/your-number" target="_blank" class="hover:text-green-700">Whatsapp</a>
+        <a href="https://youtube.com/@yourchannel" target="_blank" class="hover:text-red-700">Youtube</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="hover:text-blue-800">Linkedin</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-6 text-center text-sm text-gray-500 bg-white">
+    © 2025 Kaus. 
+  </footer>
+</body>
+</html>
