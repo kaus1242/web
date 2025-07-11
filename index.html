@@ -1,104 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="transition-colors duration-300">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kaus | Portfolio</title>
-  <title>Kaus | All Projects</title>
-  <link rel="icon" type="image/png" href="l.png">
+  <title>Kaus | Home</title>
+  <link rel="icon" href="l.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    .bg-beige-100 {
-      background-color: #f5f5dc;
-    }
-    .fade-in {
-      animation: fadeIn 1.5s ease-in;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
+    body { font-family: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+    .dark { background-color: #0f172a; color: #e2e8f0; }
+    .bg-tech { background-color: #0f172a; }
+    .bg-accent { background-color: #1e293b; }
+    .text-accent { color: #cbd5e1; }
+    .highlight { color: #38bdf8; }
+    .btn-tech { background-color: #38bdf8; color: white; }
+    .btn-tech:hover { background-color: #0ea5e9; }
   </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
-  <!-- NAVBAR -->
-  <nav class="w-full bg-white shadow-md fixed top-0 z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-xl font-bold">KAUS</h1>
-      <ul class="flex space-x-6">
-        <li><a href="#about" class="hover:text-gray-500">About Me</a></li>
-        <li><a href="#projects" class="hover:text-gray-500">Projects</a></li>
-        <li><a href="#resume" class="hover:text-gray-500">Resume</a></li>
-        <li><a href="#contact" class="hover:text-gray-500">Contact</a></li>
-      </ul>
+<body class="bg-tech text-accent dark:bg-gray-900 dark:text-gray-100">
+  <!-- Navbar -->
+  <header class="bg-accent dark:bg-gray-800 shadow fixed w-full z-10">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
+      <div class="flex items-center space-x-3">
+        <span class="font-bold text-lg text-white">KAUS</span>
+      </div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#about" class="hover:text-sky-400">About</a>
+        <a href="#projects" class="hover:text-sky-400">Projects</a>
+        <a href="#resume" class="hover:text-sky-400">Resume</a>
+        <a href="#contact" class="hover:text-sky-400">Contact</a>
+      </nav>
+      <button onclick="toggleDarkMode()" class="md:hidden text-white">
+        <i id="darkIcon" class="fas fa-moon"></i>
+      </button>
     </div>
-  </nav>
+  </header>
 
-  <!-- HERO SECTION -->
-  <section class="h-screen flex flex-col justify-center items-center bg-beige-100 pt-20 text-center fade-in" id="home">
-    <img src="kaus.jpg" alt="Kaus Photo" class="w-32 h-32 rounded-full shadow-lg mb-6 border-4 border-white">
-    <h2 class="text-4xl font-bold mb-4">Usman Abdulkareem</h2>
-    <p class="text-lg text-gray-600 max-w-xl">Combining engineering, creativity, and technology to create purposeful digital experiences.</p>
+  <!-- Hero Section -->
+  <section class="pt-24 pb-16 px-4 text-center" data-aos="fade-up">
+    <img src="images/profile.jpg" alt="Kaus" class="mx-auto w-32 h-32 rounded-full shadow-lg mb-4">
+    <h1 class="text-3xl font-bold text-white">Hi, I'm <span class="highlight">Kaus</span> 👋</h1>
+    <p class="text-gray-300 mt-2 max-w-xl mx-auto">
+      A passionate content creator and aspiring full-stack developer. I love building helpful tools and smart systems.
+    </p>
   </section>
 
-  <!-- ABOUT ME -->
-  <section class="py-20 px-4 bg-white fade-in" id="about">
+  <!-- About -->
+  <section id="about" class="py-16 bg-accent px-4" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl font-semibold mb-4 text-white">About Me</h2>
+      <p class="text-gray-300">
+        I'm currently studying Mechanical Engineering with a strong interest in robotics and automation. I build web apps to solve everyday problems and document my journey as a content creator.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 px-4" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-2xl font-semibold mb-8 text-white">Projects</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="projects.html#cad" class="block p-4 bg-accent shadow rounded hover:shadow-lg transition transform hover:scale-105" data-aos="zoom-in">
+          <h3 class="font-semibold mb-2 text-white">CAD Designs</h3>
+          <p class="text-sm text-gray-400">SolidWorks, Fusion360 models.Click to see</p>
+        </a>
+        <a href="projects.html#arduino" class="block p-4 bg-accent shadow rounded hover:shadow-lg transition transform hover:scale-105" data-aos="zoom-in" data-aos-delay="100">
+          <h3 class="font-semibold mb-2 text-white">Arduino Projects</h3>
+          <p class="text-sm text-gray-400">Voice-controlled car, IoT farming</p>
+        </a>
+        <a href="projects.html#webapp" class="block p-4 bg-accent shadow rounded hover:shadow-lg transition transform hover:scale-105" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="font-semibold mb-2 text-white">Web & App Designs</h3>
+          <p class="text-sm text-gray-400">Direction app, personal portfolio</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume" class="py-16 bg-accent px-4" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl font-semibold mb-4 text-white">Resume</h2>
+      <p class="text-gray-300 mb-4">
+        Here's a brief overview of my skills, experience, and education. For more details, you can view or download my full resume.
+      </p>
+      <a href="resume.pdf" download class="inline-block px-5 py-2 btn-tech rounded hover:bg-sky-500 transition">
+        <i class="fas fa-download mr-2"></i> Download Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-4" data-aos="fade-up">
     <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-2xl font-bold mb-4">About Me</h2>
-      <p>I’m a mechanical engineer,free fire esports player and content creator passionate about solving real-world problems through tech. From IoT farming systems to navigation app ideas, I’m building to learn and impact. I also share gaming content on Youtube.</p>
-    </div>
-  </section>
-
-  <!-- PROJECTS PREVIEW -->
-  <section class="py-20 px-4 bg-gray-100 fade-in" id="projects">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-2xl font-bold text-center mb-10">Projects</h2>
-      <div class="grid gap-6 md:grid-cols-3">
-        <a href="projects.html#car" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105 block">
-          <h3 class="text-xl font-semibold mb-2">Voice-Controlled Car</h3>
-          <p class="text-gray-600">Bluetooth-enabled car with servo and ultrasonic tech.</p>
-        </a>
-        <a href="projects.html#iot" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105 block">
-          <h3 class="text-xl font-semibold mb-2">IoT Fish Farming System</h3>
-          <p class="text-gray-600">Smart aquaculture using sensors, ESP32, and auto feeders.</p>
-        </a>
-        <a href="projects.html#direction" class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105 block">
-          <h3 class="text-xl font-semibold mb-2">Direction App Concept</h3>
-          <p class="text-gray-600">Helping users navigate local routes in Nigeria.</p>
-        </a>
+      <h2 class="text-2xl font-semibold mb-4 text-white">Contact Me</h2>
+      <p class="text-gray-300 mb-6">Let’s connect on any platform below:</p>
+      <div class="flex justify-center space-x-6 text-2xl">
+        <a href="https://wa.me/2349034827735" class="text-green-400 hover:text-green-500">Whatsapp</a>
+        <a href="https://youtube.com/@kausgaming63" class="text-red-500 hover:text-red-600">Youtube</a>
+        <a href="https://linkedin.com/in/yourprofile" class="text-sky-400 hover:text-sky-500">Linkeden</a>
       </div>
     </div>
   </section>
 
-  <!-- RESUME -->
-  <section class="py-20 px-4 bg-white fade-in" id="resume">
-    <div class="max-w-xl mx-auto text-center">
-      <h2 class="text-2xl font-bold mb-4">Resume</h2>
-      <p class="mb-6">Want the full details of my experience?</p>
-      <a href="resume.pdf" download class="bg-gray-800 text-white px-6 py-2 rounded hover:bg-gray-700 transition">Download My Resume</a>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="py-20 px-4 bg-gray-100 fade-in" id="contact">
-    <div class="max-w-xl mx-auto text-center">
-      <h2 class="text-2xl font-bold mb-6">Contact</h2>
-      <p class="mb-4">Let’s connect on your favorite platform:</p>
-      <div class="flex justify-center space-x-6 text-3xl">
-        <a href="https://wa.me/+2349034827735" target="_blank" class="hover:text-green-700">Whatsapp</a>
-        <a href="https://youtube.com/@kausgaming63" target="_blank" class="hover:text-red-700">Youtube</a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="hover:text-blue-800">Linkedin</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="py-6 text-center text-sm text-gray-500 bg-white">
-    © 2025 Kaus. 
+  <footer class="text-center text-sm text-gray-500 py-6 bg-accent text-white">
+    &copy; 2025 Kaus.
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      const icon = document.getElementById("darkIcon");
+      html.classList.toggle("dark");
+      icon.classList.toggle("fa-moon");
+      icon.classList.toggle("fa-sun");
+    }
+  </script>
 </body>
 </html>
